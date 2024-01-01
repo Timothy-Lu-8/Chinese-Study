@@ -1,0 +1,87 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+.home h1{
+  color: red;
+  font-size: 45px;
+}
+
+.home p {
+  border: 5px solid grey;
+  border-radius: 15px;
+  width: 400px;
+  padding: 10px;
+  font-size: 25px;
+}
+
+.chin1501 {
+  position: relative;
+  left: 550px;
+  width: 150px;
+  padding: 5px;
+  background-color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+.chin1501:hover {
+  cursor: pointer;
+  background-color: #e5e4e2;
+}
+
+.chin1 span {
+  position: relative;
+  left: 686px;
+  bottom: 47px;
+}
+
+.chin1 span:hover {
+  background-color: #e5e4e2;
+}
+
+.chin1502 {
+  position: absolute;
+  left: 560px;
+  width: 150px;
+  margin: 0;
+  padding: 5px;
+  background-color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+}
+
+.chin1502:hover {
+  cursor: pointer;
+  background-color: #e5e4e2;
+}
+
+.chin2 span {
+  position: relative;
+  left: 688px;
+  top: 7px;
+  display: none;
+}
+
+.chin2 span:hover {
+  background-color: #e5e4e2;
+}
+
+.dropdown-component p{
+  position: relative;
+  left: 550px;
+  bottom: 50px;
+  display: block;
+  width: 160px;
+  margin: 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
+}
+
+.dropdown-component p:hover {
+  background-color: #e5e4e2;
+  cursor: pointer;
+}
