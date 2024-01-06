@@ -1,5 +1,5 @@
 const express = require('express')
-const {createCharacter,
+const {createCharacter
 } = require('../controllers/characterController')
 
 const router = express.Router()
