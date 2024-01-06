@@ -6,14 +6,14 @@ const Chin1 = () => {
     const Dropdown = () => {
         return (
             <div className="dropdown-component">
-                <p>All</p>
-                <p>(一) Lesson 1</p>
-                <p>(二) Lesson 2</p>
-                <p>(三) Lesson 3</p>
-                <p>(四) Lesson 4</p>
-                <p>(五) Lesson 5</p>
-                <p>(六) Lesson 6</p>
-                <p>(七) Lesson 7</p>
+                <a href="#">All</a>
+                <a href="/chin1l1">(一) Lesson 1</a>
+                <a href="#">(二) Lesson 2</a>
+                <a href="#">(三) Lesson 3</a>
+                <a href="#">(四) Lesson 4</a>
+                <a href="#">(五) Lesson 5</a>
+                <a href="#">(六) Lesson 6</a>
+                <a href="#">(七) Lesson 7</a>
             </div>
         )
     }

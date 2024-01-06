@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
-.home h1{
+.homeText h1{
   color: red;
   font-size: 45px;
 }
 
-.home p {
+.homeText p {
   border: 5px solid grey;
   border-radius: 15px;
   width: 400px;
@@ -69,7 +69,7 @@
   background-color: #e5e4e2;
 }
 
-.dropdown-component p{
+.dropdown-component a{
   position: relative;
   left: 550px;
   bottom: 50px;
@@ -81,7 +81,29 @@
   background-color: white;
 }
 
-.dropdown-component p:hover {
+.dropdown-component a:hover {
   background-color: #e5e4e2;
+  cursor: pointer;
+}
+
+label, input {
+  display: block;
+}
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
   cursor: pointer;
 }

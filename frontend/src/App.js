@@ -1,23 +1,17 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom' 
 
 import Home from './pages/Home'
-import Chin1 from './components/Chin1'
-import Chin2 from './components/Chin2'
+import C1L1 from './pages/C1L1'
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <div className="pages">
           <Routes>
-            <Route
-            path="/"
-            element={<Home/>} 
-            />
+            <Route index element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/chin1l1" element={<C1L1/>} />
           </Routes>
-        </div>
-        <Chin1 />
-        <Chin2 />
       </BrowserRouter>
     </div>
   );
