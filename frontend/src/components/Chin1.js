@@ -1,19 +1,24 @@
 import {useState} from "react"
+import { useNavigate } from "react-router-dom";
 
 const Chin1 = () => {
     const [open, setOpen] = useState(false);
     
+    const navigate = useNavigate()
+    const toPage = (courseNum, lessonNum) => {
+      navigate('/flashcards', {state:{courseNum, lessonNum}})
+    }
     const Dropdown = () => {
         return (
             <div className="dropdown-component">
                 <a href="#">All</a>
-                <a href="/chin1l1">(一) Lesson 1</a>
-                <a href="#">(二) Lesson 2</a>
-                <a href="#">(三) Lesson 3</a>
-                <a href="#">(四) Lesson 4</a>
-                <a href="#">(五) Lesson 5</a>
-                <a href="#">(六) Lesson 6</a>
-                <a href="#">(七) Lesson 7</a>
+                <a onClick={()=>{toPage("1501","1")}}>(一) Lesson 1</a>
+                <a onClick={()=>{toPage("1501","2")}}>(二) Lesson 2</a>
+                <a onClick={()=>{toPage("1501","3")}}>(三) Lesson 3</a>
+                <a onClick={()=>{toPage("1501","4")}}>(四) Lesson 4</a>
+                <a onClick={()=>{toPage("1501","5")}}>(五) Lesson 5</a>
+                <a onClick={()=>{toPage("1501","6")}}>(六) Lesson 6</a>
+                <a onClick={()=>{toPage("1501","7")}}>(七) Lesson 7</a>
             </div>
         )
     }

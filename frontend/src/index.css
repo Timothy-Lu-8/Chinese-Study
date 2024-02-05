@@ -86,9 +86,14 @@
   cursor: pointer;
 }
 
+.create {
+  display: none;
+}
+
 label, input {
   display: block;
 }
+
 input {
   padding: 10px;
   margin-top: 10px;
@@ -98,6 +103,7 @@ input {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
 form button {
   background: var(--primary);
   border: 0;
