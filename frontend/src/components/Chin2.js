@@ -1,31 +1,30 @@
 import {useState} from "react"
+import { useNavigate } from "react-router-dom";
 
 const Chin2 = () => {
     const [open, setOpen] = useState(false);
     
+    const navigate = useNavigate()
+    const toPage = (courseNum, lessonNum) => {
+      navigate('/flashcards', {state:{courseNum, lessonNum}})
+    }
     const Dropdown = () => {
         return (
-            <div className="dropdown-component">
-                <p>All</p>
-                <p>(一) Lesson 1</p>
-                <p>(二) Lesson 2</p>
-                <p>(三) Lesson 3</p>
-                <p>(四) Lesson 4</p>
-                <p>(五) Lesson 5</p>
-                <p>(六) Lesson 6</p>
-                <p>(七) Lesson 7</p>
+            <div className="chin2-dropdown-component">
+                {/* <a href="#">All</a> */}
+                <a onClick={()=>{toPage("1502","8")}}>(八) Lesson 8</a>
+                <a onClick={()=>{toPage("1502","9")}}>(九) Lesson 9 (In Progress!)</a>
             </div>
         )
     }
 
     return (
         <div className="chin2">
-            <p className="chin1502" onClick={() => setOpen(!open)}>Chinese 1502 (In progress!)</p>
-            <span className="material-symbols-outlined">arrow_drop_down</span>
-            {/* <a href="#" className="dropdown" onClick={() => setOpen(!open)}>
-                <span className="material-symbols-outlined">arrow_drop_down</span>
+            <p className="chin1502" onClick={() => setOpen(!open)}>Chinese 1502</p>
+            <a href="#" className="dropdown">
+                <span className="material-symbols-outlined" onClick={() => setOpen(!open)}>arrow_drop_down</span>
             </a>
-            {open && Dropdown()} */}
+            {open && Dropdown()}
         </div>
     );
 }

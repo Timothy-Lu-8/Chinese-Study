@@ -3,7 +3,7 @@ const character = require('../models/characterModel')
 
 //get all characters
 const getAllCharacters = async(req, res) => {
-    const characters = await character.find({lessonNumber: req.params.lessonNum})
+    const characters = await character.find({lessonNumber: req.params.lessonNum, courseNumber: req.params.courseNum})
     if (!characters){
         return res.status(404).json({error: "No such characters"})
     }

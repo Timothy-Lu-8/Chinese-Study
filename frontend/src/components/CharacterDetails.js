@@ -1,9 +1,8 @@
 const CharacterDetails = ({character}) => {
     return (
         <div className="character-details">
-            <h4>Character: {character.chineseSymbol}</h4>
-            <p><strong>Pinyin: {character.pinyin}</strong></p>
-            <p><strong>English Definition: {character.englishDefinition}</strong></p>
+            <h4>Character: {character.chineseSymbol}({character.pinyin})</h4>
+            <p><strong>Definition: {character.englishDefinition}</strong></p>
         </div>
     )
 }

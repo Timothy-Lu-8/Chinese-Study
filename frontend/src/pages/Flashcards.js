@@ -5,11 +5,11 @@ import CharacterDetails from "../components/CharacterDetails"
 const Flashcards = () => {
     const [characters, setCharacters] = useState(null)
     const location = useLocation()
-    //const courseNum = location.state.courseNum
+    const courseNum = location.state.courseNum
     const lessonNum = location.state.lessonNum
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch(`/api/characters/${lessonNum}`, {
+            const response = await fetch(`/api/characters/${lessonNum}/${courseNum}`, {
                 //mode: 'no-cors',
                 method: 'GET',
                 headers: {
@@ -28,6 +28,7 @@ const Flashcards = () => {
 
     return (
         <div className="characterFlashcards">
+            <h2>Chinese {courseNum} Lesson {lessonNum}</h2>
             {characters && characters.map((character) => (
                 <CharacterDetails key={character._id} character={character}/>
             ))}

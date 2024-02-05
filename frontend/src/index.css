@@ -37,10 +37,24 @@
   bottom: 47px;
 }
 
-.chin1 span:hover {
-  background-color: #e5e4e2;
+.chin1-dropdown-component a{
+  position: relative;
+  left: 550px;
+  bottom: 50px;
+  display: block;
+  width: 160px;
+  margin: 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: white;
 }
 
+.chin1-dropdown-component a:hover {
+  background-color: #e5e4e2;
+  cursor: pointer;
+}
+
+/*chin2 component*/
 .chin1502 {
   position: absolute;
   left: 560px;
@@ -62,17 +76,12 @@
   position: relative;
   left: 688px;
   top: 7px;
-  display: none;
 }
 
-.chin2 span:hover {
-  background-color: #e5e4e2;
-}
-
-.dropdown-component a{
+.chin2-dropdown-component a{
   position: relative;
-  left: 550px;
-  bottom: 50px;
+  left: 552px;
+  top: 7px;
   display: block;
   width: 160px;
   margin: 0;
@@ -81,11 +90,12 @@
   background-color: white;
 }
 
-.dropdown-component a:hover {
+.chin2-dropdown-component a:hover {
   background-color: #e5e4e2;
   cursor: pointer;
 }
 
+/*adding new flashcards*/
 .create {
   display: none;
 }
@@ -112,4 +122,25 @@ form button {
   font-family: "Poppins";
   border-radius: 4px;
   cursor: pointer;
+}
+
+/*character details*/
+.character-details {
+  background: #d3d3d3;
+  border-radius: 4px;
+  width: 35%;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+.character-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 25px;
+  color: var(--primary);
+}
+.character-details p {
+  margin: 0;
+  font-size: 20px;
+  color: black;
 }

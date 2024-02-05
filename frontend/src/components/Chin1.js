@@ -10,8 +10,8 @@ const Chin1 = () => {
     }
     const Dropdown = () => {
         return (
-            <div className="dropdown-component">
-                <a href="#">All</a>
+            <div className="chin1-dropdown-component">
+                {/* <a href="#">All</a> */}
                 <a onClick={()=>{toPage("1501","1")}}>(一) Lesson 1</a>
                 <a onClick={()=>{toPage("1501","2")}}>(二) Lesson 2</a>
                 <a onClick={()=>{toPage("1501","3")}}>(三) Lesson 3</a>

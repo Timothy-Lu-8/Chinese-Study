@@ -6,6 +6,6 @@ const {createCharacter,
 const router = express.Router()
 
 router.post('/', createCharacter)
-router.get('/:lessonNum', getAllCharacters)
+router.get('/:lessonNum/:courseNum', getAllCharacters)
 
 module.exports = router
