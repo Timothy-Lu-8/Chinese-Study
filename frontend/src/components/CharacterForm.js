@@ -15,7 +15,7 @@ const CharacterForm = () => {
 
         const character = {chineseSymbol, pinyin, englishDefinition, courseNumber, lessonNumber, supplementary, wt}
 
-        const response = await fetch('/api/characters', {
+        const response = await fetch('https://chinese-study-pi.vercel.app/characters', {
             method: 'POST',
             body: JSON.stringify(character),
             headers: {
