@@ -1,11 +1,15 @@
 const express = require('express')
 const {createCharacter,
-    getAllCharacters
+    getAllCharactersByLessonCourse,
+    getAllCharactersByCourse,
+    deleteMultipleCharacters
 } = require('../controllers/characterController')
 
 const router = express.Router()
 
 router.post('/', createCharacter)
-router.get('/:lessonNum/:courseNum', getAllCharacters)
+router.get('/:courseNum', getAllCharactersByCourse)
+router.get('/:lessonNum/:courseNum', getAllCharactersByLessonCourse)
+router.delete('/:lessonNumber', deleteMultipleCharacters)
 
 module.exports = router

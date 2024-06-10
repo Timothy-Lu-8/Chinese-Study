@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Home from './pages/Home'
 import Flashcards from './pages/Flashcards';
+import Quiz from './pages/Quiz';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/flashcards" element={<Flashcards/>} />
+            <Route path='/quiz' element={<Quiz/>}/>
           </Routes>
       </BrowserRouter>
     </div>
@@ -20,4 +22,6 @@ function App() {
 export default App;
 
 /*TO DO
-for quiz, i think select course number -> chapters from that course+select all button*/
+update the database
+possibly add supplementary
+add important sentence structures*/

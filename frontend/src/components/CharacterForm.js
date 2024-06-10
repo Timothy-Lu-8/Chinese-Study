@@ -6,12 +6,14 @@ const CharacterForm = () => {
     const [englishDefinition, setEnglishDefinition] = useState("")
     const [courseNumber, setCourseNumber] = useState("")
     const [lessonNumber, setLessonNumber] = useState("")
+    const [supplementary, setSupplementary] = useState("")
+    const [wt, setWT] = useState("")
     const [error, setError] = useState(null)
 
     const handleSubmission = async(e) => {
         e.preventDefault()
 
-        const character = {chineseSymbol, pinyin, englishDefinition, courseNumber, lessonNumber}
+        const character = {chineseSymbol, pinyin, englishDefinition, courseNumber, lessonNumber, supplementary, wt}
 
         const response = await fetch('/api/characters', {
             method: 'POST',
@@ -30,8 +32,6 @@ const CharacterForm = () => {
             setChineseSymbol("")
             setPinyin("")
             setEnglishDefinition("")
-            setCourseNumber("")
-            setLessonNumber("")
             setError(null)
             console.log("new character added")
         }
@@ -54,6 +54,12 @@ const CharacterForm = () => {
 
             <label>Lesson Number:</label>
             <input type="text" onChange={(e) => setLessonNumber(e.target.value)} value ={lessonNumber} />
+
+            <label>Supplementary:</label>
+            <input type="text" onChange={(e) => setSupplementary(e.target.value)} value ={supplementary} />
+
+            <label>Type:</label>
+            <input type="text" onChange={(e) => setWT(e.target.value)} value ={wt} />
 
             <button>Add Character</button>
             {error && <div className="error">{error}</div>}

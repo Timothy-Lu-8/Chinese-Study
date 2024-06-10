@@ -1,0 +1,85 @@
+.headerSection {
+    width: 88%;
+}
+
+.question {
+    display: block;
+    font-size: 1.75em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    width: 55%;
+}
+
+.score {
+    left: 90%;
+    position: relative;
+    display: block;
+    font-size: 1.75em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    width: 50%;
+}
+
+.streak {
+    left: 90%;
+    position: relative;
+    display: block;
+    font-size: 1.75em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    width: 50%;
+}
+
+.correct {
+    left: 90%;
+    position: relative;
+    display: block;
+    font-size: 1.75em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    width: 50%;
+}
+
+.perc {
+    left: 90%;
+    position: relative;
+    display: block;
+    font-size: 1.75em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    width: 50%;
+}
+
+.answerChoices { /* size of answer box */
+    width: 85%;
+    left: 3em;
+    height: 9em;
+  }
+  
+.answerChoices button {
+    position: relative;
+    padding: 15px 15px;
+    margin: 20px;
+    top: 55%;
+}
+
+.answerChoices div {
+    position: relative;
+    bottom: 1.5em;
+    left: 10%;
+}

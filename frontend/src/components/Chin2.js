@@ -2,29 +2,32 @@ import {useState} from "react"
 import { useNavigate } from "react-router-dom";
 
 const Chin2 = () => {
-    const [open, setOpen] = useState(false);
+    const [lessonNumber, setLessonNumber] = useState("");
     
     const navigate = useNavigate()
-    const toPage = (courseNum, lessonNum) => {
-      navigate('/flashcards', {state:{courseNum, lessonNum}})
+    const toPage = () => {
+        console.log(lessonNumber)
+        navigate('/flashcards', {state:{courseNum:"1502", lessonNum:lessonNumber}})
     }
-    const Dropdown = () => {
-        return (
-            <div className="chin2-dropdown-component">
-                {/* <a href="#">All</a> */}
-                <a onClick={()=>{toPage("1502","8")}}>(八) Lesson 8</a>
-                <a onClick={()=>{toPage("1502","9")}}>(九) Lesson 9 (In Progress!)</a>
-            </div>
-        )
+
+    const lessonChange = (event) => {
+        setLessonNumber(event.target.value)
     }
 
     return (
         <div className="chin2">
-            <p className="chin1502" onClick={() => setOpen(!open)}>Chinese 1502</p>
-            <a href="#" className="dropdown">
-                <span className="material-symbols-outlined" onClick={() => setOpen(!open)}>arrow_drop_down</span>
-            </a>
-            {open && Dropdown()}
+            <select className="c2Dropdown" value={lessonNumber} onChange={lessonChange} p>
+                <option value="" disabled selected>Chinese 1502</option>
+                <option value={"0"}>All</option>
+                <option value={"8"}>Lesson 8</option>
+                <option value={"9"}>Lesson 9</option>
+                <option value={"10"}>Lesson 10</option>
+                <option value={"11"}>Lesson 11</option>
+                <option value={"12"}>Lesson 12</option>
+                <option value={"13"}>Lesson 13</option>
+                <option value={"14"}>Lesson 14</option>
+            </select>
+            {toPage(lessonNumber)}
         </div>
     );
 }
