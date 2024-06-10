@@ -20,7 +20,7 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use('/api/characters', apiRoutes)
+/* app.use('/api/characters', apiRoutes)
 mongoose.connect(process.env.MONGO_URI, )
     .then(() => {
         app.listen(process.env.PORT, () => {
@@ -29,5 +29,5 @@ mongoose.connect(process.env.MONGO_URI, )
     })
     .catch((error) => {
         console.log(error)
-    })
+    }) */
 
