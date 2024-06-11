@@ -7,7 +7,7 @@ require('dotenv').config()
 app.use(cors(
     {
         origin: ["https://chinese-study-7b9ltjpri-timothy-lus-projects.vercel.app"],
-        methods: ["POST", "GET"],
+        methods: ["POST", "GET", "DELETE", "PUT"],
         credentials: true
     }
 ))
