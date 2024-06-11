@@ -1,17 +1,17 @@
 const mongoose = require('mongoose')
 const character = require('../models/characterModel')
 
-//get all characters
-const getAllCharacters = async(req, res) => {
-    const characters = await character.find({})
+const getAllCharactersByCourse = async(req, res) => {
+    const characters = await character.find({courseNumber: req.params.courseNum})
+    if (!characters) {
+        return res.status(404).json({error: "No such characters"})
+    }
     res.status(200).json(characters)
 }
 
-//get all characters based on course+lesson number
-const getSomeCharacters = async(req, res) => {
-    const {lessonNumber, courseNumber} = req.params
-    const characters = await character.find({})
-
+//get all characters by lesson and course
+const getAllCharactersByLessonCourse = async(req, res) => {
+    const characters = await character.find({lessonNumber: req.params.lessonNum, courseNumber: req.params.courseNum})
     if (!characters){
         return res.status(404).json({error: "No such characters"})
     }
@@ -20,10 +20,10 @@ const getSomeCharacters = async(req, res) => {
 
 //create new character post
 const createCharacter = async(req, res) => {
-    const {chineseSymbol, pinyin, englishDefinition, courseNumber, lessonNumber} = req.body
+    const {chineseSymbol, pinyin, englishDefinition, courseNumber, lessonNumber, supplementary, wt} = req.body
     
     try {
-        const chineseCharacter = await character.create({chineseSymbol, pinyin, englishDefinition, courseNumber, lessonNumber})
+        const chineseCharacter = await character.create({chineseSymbol, pinyin, englishDefinition, courseNumber, lessonNumber, supplementary, wt})
         res.status(200).json(chineseCharacter)
     } catch(error) {
         res.status(400).json({error: error.message})
@@ -45,6 +45,16 @@ const deleteCharacter = async(req, res) => {
     res.status(200).json(chineseCharacter)
 }
 
+//delete multiple characters
+const deleteMultipleCharacters = async(req, res) => {
+    const characters = await character.deleteMany({lessonNumber: req.params.lessonNumber})
+
+    if (!characters){
+        return res.status(404).json({error: "No such character"})
+    }
+    res.status(200).json("deleted")
+}
+
 //update character post
 const updateCharacter = async(req, res) => { 
     const {id} = req.params
@@ -62,9 +72,10 @@ const updateCharacter = async(req, res) => {
 }
 
 module.exports = {
-    getAllCharacters,
-    getSomeCharacters,
+    getAllCharactersByLessonCourse,
+    getAllCharactersByCourse,
     createCharacter,
     deleteCharacter,
+    deleteMultipleCharacters,
     updateCharacter
 }

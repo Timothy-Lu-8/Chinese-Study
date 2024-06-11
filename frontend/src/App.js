@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom' 
 
 import Home from './pages/Home'
-import C1L1 from './pages/C1L1'
+import Flashcards from './pages/Flashcards';
+import Quiz from './pages/Quiz';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
           <Routes>
             <Route index element={<Home />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/chin1l1" element={<C1L1/>} />
+            <Route path="/flashcards" element={<Flashcards/>} />
+            <Route path='/quiz' element={<Quiz/>}/>
           </Routes>
       </BrowserRouter>
     </div>
@@ -20,5 +22,6 @@ function App() {
 export default App;
 
 /*TO DO
-for quiz, i think select course number -> chapters from that course+select all button
-create individual pages -> this is probably where the backend comes into play*/
+update the database
+possibly add supplementary
+add important sentence structures*/

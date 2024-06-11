@@ -1,0 +1,21 @@
+.answer-details {
+  background: #d3d3d3;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  bottom: 1rem;
+  left: 35%;
+}
+
+.answer-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 25px;
+  color: var(--primary);
+}
+.answer-details p {
+  margin: 0;
+  font-size: 20px;
+  color: black;
+}

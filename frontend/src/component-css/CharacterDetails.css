@@ -1,0 +1,19 @@
+.character-details {
+    background: #d3d3d3;
+    border-radius: 4px;
+    width: 35%;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  }
+  .character-details h4 {
+    margin: 0 0 10px 0;
+    font-size: 25px;
+    color: var(--primary);
+  }
+  .character-details p {
+    margin: 0;
+    font-size: 20px;
+    color: black;
+  }

@@ -1,11 +1,11 @@
+import '../component-css/CharacterDetails.css'
+
 const CharacterDetails = ({character}) => {
     return (
         <div className="character-details">
-            <h4>Character: {character.chineseSymbol}</h4>
-            <p><strong>Pinyin: {character.pinyin}</strong></p>
-            <p><strong>English Definition: {character.englishDefinition}</strong></p>
-            <p><strong>Course Number: {character.courseNumber}</strong></p>
-            <p><strong>Lesson Number: {character.lessonNumber}</strong></p>
+            <h4>Character: {character.chineseSymbol}({character.pinyin})</h4>
+            <p><strong>Definition: {character.englishDefinition}</strong></p>
+            <p><strong>Type of Term: {character.wt}</strong></p>
         </div>
     )
 }

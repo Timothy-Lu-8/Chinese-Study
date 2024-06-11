@@ -22,9 +22,20 @@ const characterSchema = new Schema({
     lessonNumber: {
         type: String,
         required: true
+    },
+    supplementary: {
+        type: String,
+        required: true
+    },
+    wt: {
+        type: String,
+        required: true
     }
 
     
 })
 
 module.exports = mongoose.model("Character", characterSchema)
+
+//f is for non-supplementary
+//t is for supplementary
