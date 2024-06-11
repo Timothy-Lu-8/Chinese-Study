@@ -1,16 +1,8 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const apiRoutes = require('./routes/characters')
-const cors = require('cors')
+//const cors = require('cors')
 require('dotenv').config()
-
-app.use(cors(
-    {
-        origin: ["https://chinese-study-7b9ltjpri-timothy-lus-projects.vercel.app"],
-        methods: ["POST", "GET", "DELETE", "PUT"],
-        credentials: true
-    }
-))
 
 const app = express()
 
@@ -19,8 +11,9 @@ app.use((req, res, next) => {
     console.log(req.path, req.method)
     next()
 })
+//app.use(cors())
 
-/* app.use('/api/characters', apiRoutes)
+app.use('/api/characters', apiRoutes)
 mongoose.connect(process.env.MONGO_URI, )
     .then(() => {
         app.listen(process.env.PORT, () => {
@@ -29,5 +22,4 @@ mongoose.connect(process.env.MONGO_URI, )
     })
     .catch((error) => {
         console.log(error)
-    }) */
-
+    })

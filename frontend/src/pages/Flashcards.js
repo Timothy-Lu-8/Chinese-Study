@@ -26,7 +26,7 @@ const Flashcards = () => {
             if (lessonNum != "0"){
                 setDisplay(true)
 
-                response = await fetch(`https://chinese-study-pi.vercel.app/characters/${lessonNum}/${courseNum}`, {
+                response = await fetch(`api/characters/${lessonNum}/${courseNum}`, {
                     //mode: 'no-cors',
                     method: 'GET',
                     headers: {
@@ -37,7 +37,7 @@ const Flashcards = () => {
 
             else {
                 displaying = "Chinese " + courseNum + " All"
-                response = await fetch(`https://chinese-study-pi.vercel.app/characters/${courseNum}`, {
+                response = await fetch(`/api/characters/${courseNum}`, {
                     //mode: 'no-cors',
                     method: 'GET',
                     headers: {
